@@ -1,7 +1,7 @@
 # express-xerror
 Node后端微服务框架，基于express-xerror中间件，全局错误捕获
 
-[传送门：XServer官网文档](http://xserver.top)
+[传送门：XServer官网文档](http://www.xserver.top)
 
 框架目录结构
 >
