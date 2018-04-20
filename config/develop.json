@@ -3,9 +3,10 @@
         "level": "log"
     },
     "error": {
-        "debug": true
+        "debug": true,
+        "errStatus": 500
     },
     "server": {
-        "port": 8085
+        "port": 3636
     }
 }

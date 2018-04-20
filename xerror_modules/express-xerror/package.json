@@ -1,6 +1,6 @@
 {
   "name": "express-xerror",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Express路由中间件，全局错误捕获",
   "main": "index.js",
   "scripts": {

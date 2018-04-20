@@ -13,7 +13,12 @@ const log = require('tracer').colorConsole({ level: config.log.level })
 const app = express()
 app.use(bodyParser.json())
 app.use(router)
-app.use(xerror(config.error, (ctx, err) => { log.info('额外可选错误处理') }))   // 需要在最后一位路由处理
+app.use(xerror(config.error, (req, res, err) => { // 需要在最后一位路由处理
+    log.info('额外可选错误处理')
+    const result = { err: err.message }
+    result.stack = err.stack
+    res.status(200).send(result)
+}))
 
 // 模拟错误
 router.get('/test', function (req, res) {
